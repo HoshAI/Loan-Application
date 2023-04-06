@@ -64,7 +64,7 @@ The system should perform the following tasks:
 ### Flutter: 
    i will be using fluter to develop the user interface(UI) of the system
 ### Laravel: 
-   i will use Laravel (a PHP web framework to develop the backend of the system.
+   i will use Laravel (a PHP web framework )to develop the backend of the system.
  ### APIs: 
     Use RESTful APIs to eneble communication between the frontend(Flutter) and the backend (Laravel) of the system.
        
