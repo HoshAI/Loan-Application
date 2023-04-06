@@ -59,11 +59,17 @@ The system should perform the following tasks:
 ## IMPLEMENTATION
        
        To implement the above system, i will be using the following technologies:
-       ### Flutter: i will be using fluter to develop the user interface(UI) of the system.
-       ### Laravel: i will use Laravel (a PHP web framework to develop the backend of the system.
-       ### APIs: Use RESTful APIs to eneble communication between the frontend(Flutter) and the backend (Laravel) of the system.
+      
+      
+### Flutter: 
+   i will be using fluter to develop the user interface(UI) of the system
+### Laravel: 
+   i will use Laravel (a PHP web framework to develop the backend of the system.
+ ### APIs: 
+    Use RESTful APIs to eneble communication between the frontend(Flutter) and the backend (Laravel) of the system.
        
-       # UI Design 
+       
+## UI Design 
        
       For the UI design, i will be creating a simple and intuitive interface that allows user to create an account, log in and apply for a loan, The Ui will be responsive and easy to navigate. The UI will be responsive and easy to navigate, with clear labels and input fields for each of the required loan appliaction fields,
        
