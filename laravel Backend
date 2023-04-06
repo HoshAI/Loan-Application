@@ -1,0 +1,35 @@
+# Define a loan appliaction route in
+ `routes/api.php`:
+ ##
+ Routes::post('/loan-appliaction', 'LoanApplicationController@store');
+ 
+ ## Implement the `store` method in the `LoanApplicationController` to handle loan application:
+    public function store(Request $request)
+    {
+       // validate the request data
+       $request->Validate([
+        'name' => 'required',
+        'email' => 'required|email',
+        'phone_number' => 'required',
+        'address' => 'required',
+        'salary' => 'required',
+        'amount_to_borrow' => 'required',
+        'duration' => 'required',
+     ]);
+     
+     // create a new loan application in the database 
+     $loanApplication = LoanApplication::create([
+      'name' => $request->input('name'),
+      'email' => $request->input('email'),
+      'phone_number' => $request=>input('phone_number'),
+      'address' => $request->input('address'),
+      'salary' => $request->input('salary'),
+      'amount_to_borrow' => $request->input('amount_to_borrow'),
+      'duration' => $request=>input('duration'),
+      'status' => 'pending',
+      ]);
+      
+      //return the loan appliaction ID
+      return response()->json{['id' => $loanApplication->id]);
+      
+      
