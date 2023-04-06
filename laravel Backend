@@ -3,7 +3,7 @@
  ##
  Routes::post('/loan-appliaction', 'LoanApplicationController@store');
  
- ## Implement the `store` method in the `LoanApplicationController` to handle loan application:
+ ### Implement the `store` method in the `LoanApplicationController` to handle loan application:
     public function store(Request $request)
     {
        // validate the request data
