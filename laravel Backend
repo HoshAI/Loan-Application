@@ -5,7 +5,7 @@
  
  ### Implement the `store` method in the `LoanApplicationController` to handle loan application:
     public function store(Request $request)
-    {
+   ``` {
        // validate the request data
        $request->Validate([
         'name' => 'required',
@@ -16,7 +16,7 @@
         'amount_to_borrow' => 'required',
         'duration' => 'required',
      ]);
-     
+     ```
      // create a new loan application in the database 
      $loanApplication = LoanApplication::create([
       'name' => $request->input('name'),
