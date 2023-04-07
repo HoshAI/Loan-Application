@@ -103,4 +103,34 @@ class _LoanApplicationFormState extends state<LoanApplicationForm> {
                       _duration = value;
                       },
                       ),
-                      SizedBox(height
+                      SizedBox(height: 16.0)
+                      
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                if (_formKey.currentState.validate()) {
+                                 _formkey.currentstate.save();
+                                 // TODO: send loan application to server
+                                 scaffoldMessenger.of(context).showSnackBar(
+                                   snackBar(context: Text('submitting form')),
+                                   );
+                                 }
+                               },
+                               child: Text('submit'),
+                              ),
+                             ),
+                            ],
+                           ),
+                         ],
+                       ),
+                      ),
+                    ),
+                  ),
+                ),
+               }
+               }
+               
+               # This form includes input fields for all the required information for a loan application and uses Flutter's `TextFormField' widget for each input. It also includes a `submit` button that willvalidate the form and send the loan application to the server
+                        
