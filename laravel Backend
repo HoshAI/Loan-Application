@@ -1,3 +1,4 @@
+```
 # Define a loan appliaction route in
  `routes/api.php`:
  ##
@@ -56,5 +57,5 @@
      // Return the loan application status
      return response()->json(['status' => $loanApplication->status]);
      }
-      
+      ```
       
