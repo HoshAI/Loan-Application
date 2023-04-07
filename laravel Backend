@@ -3,9 +3,10 @@
  ##
  Routes::post('/loan-appliaction', 'LoanApplicationController@store');
  
- ### Implement the `store` method in the `LoanApplicationController` to handle loan application:
+ # Implement the `store` method in the `LoanApplicationController` to handle loan application:
    
-   public function store(Request $request)
+  
+  public function store(Request $request)
    {
        // validate the request data
        $request->Validate([
@@ -31,11 +32,12 @@
       'status' => 'pending',
       ]);
       
-      //return the loan appliaction ID
+      //  Return the loan appliaction ID
       return response()->json{['id' => $loanApplication->id]);
    }
    
-   implement loan processing logic in the `LoanApplicationController`:
+   
+  # implement loan processing logic in the `LoanApplicationController`:
    
    public function processLoanApplication(Request $request, $id)
     {
@@ -53,8 +55,9 @@
          $loanApplication->status = 'rejected';
          $loanApplication->save();
      }
+    
      // Return the loan application status
      return response()->json(['status' => $loanApplication->status]);
-     }
+   }
       
       
