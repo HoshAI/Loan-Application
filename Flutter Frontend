@@ -1,0 +1,106 @@
+# Create a loan application form:
+
+class LoanApplication
+
+import 'package:flutter/material.dart';
+
+class LoanApplicationForm extends statefulwidget {
+@override
+_LoanApplicationFormState createState() => _LoanApplicationFormState();
+}
+
+class _LoanApplicationFormState extends state<LoanApplicationForm> {
+   final _formKey = GlobalKey<FormState>();
+   
+   string _name;
+   string _email;
+   string _phoneNumber;
+   string _address;
+   string _salary;
+   string _amountToBorrow;
+   string _duration;
+   
+   @override
+   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text( 'Loan Application'),
+      ),
+      body: SinglechildScrollview(
+       child: padding(
+         padding: const EdgeInsets.all(16.0),
+         child: Form(
+           key: _formKey,
+           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+             TextFormField(
+              decoration: InputDecoration(
+              labelText: 'Name',
+              border: OutlineInputBorder(),
+              ),
+              Validator: (value) {
+               if (value.isEmpty) {
+                 return 'please enter your name';
+                 }
+                 return null;
+                 },
+                 onSaved: (value) {
+                  _name = value;
+                 },
+                ),
+                
+                SizedBox(height: 16.0),
+                TextFormField(
+                  decoration: InputDecoration(
+                   labelText: 'Address",
+                   border: outlineInputBorder(),
+                   ),
+                 validator: (value) {
+                 if (value.isEmpty) {
+                    return 'please enter your address';
+                   }
+                   return null;
+                  },
+                  onSaved: (value) {
+                  _address = value;
+                  },
+                 ),
+                 onsaved: (value)  {
+                 _address = value;
+                 },
+                 ),
+                 SizedBox(height: 16.0),
+                 TextFormField(
+                   decoration: InputDecoration(
+                     labelText: 'Amount to Borrow',
+                     border: outlineInputBorder(),
+                     ),
+                     Validator: (value) {
+                     if (value.isEmpty) {
+                       return 'please enter the amount to borrow';
+                       }
+                       return null;
+                     },
+                     onSaved: (value) {
+                     _amountToBorrow + value;
+                     },
+                     
+                   ),
+                   SizedBox(height: 16.0),
+                   TextFormField(
+                     decoration: InputDecoration(
+                       labelText: 'Duration',
+                       border: outlineInputBorder(),
+                       ),
+                       Validator: (value) {
+                       if (value.isEmpty) {
+                       return 'please enter the duration';
+                       }
+                       return null;
+                      },
+                      onSaved: (value) {
+                      _duration = value;
+                      },
+                      ),
+                      SizedBox(height
